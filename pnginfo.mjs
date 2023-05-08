@@ -28,6 +28,8 @@ const PNGINFO = (png, cast_to_snake=true) => {
     bin_str = atob(png.slice(0,8192))
     bytes = Uint8Array.from(bin_str, c => c.charCodeAt(0)) 
   }
+  const pngmagic = bytes.slice(0,8) == '137,80,78,71,13,10,26,10'
+  if (!pngmagic) return
   let [ihdrSize,width,height] = [i32(bytes,8),i32(bytes,16),i32(bytes,20)]
   let txtOffset = 8+ihdrSize+12
   let txtSize = i32(bytes,txtOffset)
