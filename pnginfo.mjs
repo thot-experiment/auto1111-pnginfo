@@ -6,6 +6,8 @@ const infoparser = line => {
   let buffer = ''
   let key
   let quotes = false
+  //actually no idea why there are trailing : sometimes?
+  if (line.at(-1) === ':') line = line.slice(0, -1)
   ;[...line].forEach(c => {
     if (c === '"') { quotes = !quotes }
     if (c === ':' && !quotes) { key = buffer,buffer='' }
