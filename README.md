@@ -1,4 +1,4 @@
-# pnginfo
+# auto1111-pnginfo
  an extreremely minimalistic js library to extract PNG info from auto1111 gens
 
  it works on my machine
