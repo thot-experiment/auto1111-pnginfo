@@ -1,0 +1,31 @@
+{
+  "name": "auto1111-pnginfo",
+  "version": "1.0.0",
+  "description": " an extreremely minimalistic js library to extract PNG info from auto1111 gens",
+  "main": "pnginfo.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thot-experiment/pnginfo.git"
+  },
+  "keywords": [
+    "automatic1111",
+    "auto1111",
+    "png",
+    "info",
+    "pnginfo",
+    "stable",
+    "diffusion",
+    "stable",
+    "diffusion",
+    "webui"
+  ],
+  "author": "thot-experiment",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thot-experiment/pnginfo/issues"
+  },
+  "homepage": "https://github.com/thot-experiment/pnginfo#readme"
+}
