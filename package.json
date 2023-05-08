@@ -1,6 +1,6 @@
 {
   "name": "auto1111-pnginfo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": " an extreremely minimalistic js library to extract PNG info from auto1111 gens",
   "main": "pnginfo.mjs",
   "scripts": {

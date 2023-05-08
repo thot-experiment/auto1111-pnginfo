@@ -14,7 +14,7 @@ const infoparser = line => {
     else if (c === ',' && !quotes) {output[key.trim()] = buffer.slice(1),buffer=''}
     else {buffer += c}
   })
-  output[key.trim()] = buffer.slice(1)
+  if (key) output[key.trim()] = buffer.slice(1)
   return output
 }
 
@@ -34,6 +34,7 @@ const PNGINFO = (png, cast_to_snake=true) => {
   if (!pngmagic) return
   let [ihdrSize,width,height] = [i32(bytes,8),i32(bytes,16),i32(bytes,20)]
   let txtOffset = 8+ihdrSize+12
+  if (bin_str.slice(txtOffset+4,txtOffset+8) != 'tEXt') return
   let txtSize = i32(bytes,txtOffset)
   let raw_info = bin_str.slice(txtOffset+8+"parameters\u0000".length,txtOffset+8+txtSize)
   let infolines = raw_info.split('\n')
